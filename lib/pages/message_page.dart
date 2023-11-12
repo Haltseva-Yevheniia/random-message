@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:random_message/components/texts.dart';
 import 'package:random_message/list_of_messages.dart';
 import 'dart:math';
 
@@ -23,7 +24,7 @@ void changeMessage () {
   Widget build (BuildContext context) {
   return Scaffold(
     appBar: AppBar(
-      title: const Text('Message for You'),
+      title: MessagePageAppBarTitle,
       centerTitle: true,
     ),
     body: Padding(
@@ -42,7 +43,7 @@ void changeMessage () {
         });
 
       },
-        child: Icon(Icons.change_circle),
+        child: Icon(Icons.change_circle, color: Colors.yellow, size: 50,),
     ),
   );
   }
